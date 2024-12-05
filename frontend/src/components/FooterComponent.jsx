@@ -6,7 +6,7 @@ const FooterComponent = () => {
     <div>
       <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
         <div>
-          <img src={avatar} alt="" className="mb-5 w-44" />
+          <img src={avatar} alt="" className="mb-5 w-32 sm:w-44" />
           <p className="w-full md:w-2/3 text-blue-700">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
             obcaecati vel accusamus odit amet perferendis reiciendis minima
@@ -36,7 +36,7 @@ const FooterComponent = () => {
       <div>
         <hr />
         <p className="py-5 text-sm text-center">
-          Copyright 2024@ pharmazone.com.ng - All Rights Reserved.
+          Copyright 2024 pharmaZone Nig Ltd - All Rights Reserved.
         </p>
       </div>
     </div>
