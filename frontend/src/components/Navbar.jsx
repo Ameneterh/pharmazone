@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import pharma_logo from "../assets/pharmazone_logo.png";
 import pharma_avatar from "../assets/pharmazone_avatar.png";
@@ -6,9 +6,11 @@ import { FiSearch } from "react-icons/fi";
 import { MdShoppingCart } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineArrowBackIos } from "react-icons/md";
+import { ShopContext } from "../context/shopContext";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+  const { setShowSearch } = useContext(ShopContext);
 
   return (
     <div className="flex items-center justify-between py-5 font-medium">
@@ -36,7 +38,10 @@ const Navbar = () => {
       </ul>
 
       <div className="flex items-center gap-6">
-        <FiSearch className="text-xl cursor-pointer" />
+        <FiSearch
+          onClick={() => setShowSearch(true)}
+          className="text-xl cursor-pointer"
+        />
         <div className="group relative">
           <img src={pharma_avatar} alt="" className="w-6 cursor-pointer" />
 

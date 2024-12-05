@@ -14,6 +14,7 @@ import Orders from "./pages/Orders";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import FooterComponent from "./components/FooterComponent";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="px-4 sm:px-[5vw] md:px-[7vw]">
       <Navbar />
+      <SearchBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/collections" element={<Collections />} />

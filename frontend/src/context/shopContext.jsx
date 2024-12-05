@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import { products } from "../assets/assets";
 import { FaNairaSign } from "react-icons/fa6";
 
@@ -8,7 +8,7 @@ const ShopContextProvider = (props) => {
   const currency = <FaNairaSign />;
   const delivery_fee = 5000;
   const [search, setSearch] = useState("");
-  const [showSearch, setShowSearch] = useState(true);
+  const [showSearch, setShowSearch] = useState(false);
 
   const value = {
     products,

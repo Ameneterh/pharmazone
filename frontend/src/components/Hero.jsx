@@ -1,5 +1,6 @@
 import React from "react";
 import albumin from "../assets/human-albumin.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -15,7 +16,12 @@ const Hero = () => {
             Latest Arrivals
           </h1>
           <div className="flex items-center gap-2">
-            <p className="font-semibold text-sm md:text-base">SHOP NOW</p>
+            <Link
+              to="/collections"
+              className="font-semibold text-sm md:text-base text-blue-800"
+            >
+              SEARCH NOW
+            </Link>
             <p className="w-8 md:w-11 h-[2px] bg-[#414141]"></p>
           </div>
         </div>
